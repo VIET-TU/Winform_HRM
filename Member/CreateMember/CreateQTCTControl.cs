@@ -42,7 +42,7 @@ namespace HRM_Desktop.Member
 
         private void CreateQTCTControl_Load(object sender, EventArgs e)
         {
-            var lastRow = Connection.db.QTCTs
+                var lastRow = Connection.db.QTCTs
              .OrderByDescending(x => x.ma_qtct)  // Thay Id bằng khóa chính của bảng
              .FirstOrDefault();
 
