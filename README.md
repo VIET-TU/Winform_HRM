@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+
 <h1>Dự án quản lý nhân sự</h1>
 <ul>
   <li>CRUD Nhân viên</li>
