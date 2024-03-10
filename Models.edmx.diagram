@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="baed74de089d450587f249a37e384a6b" Name="Diagram1">
+        <EntityTypeShape EntityType="QLNSModel.CHUC_VU" Width="1.5" PointX="0.75" PointY="5.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLNSModel.CHUYEN_MON" Width="1.5" PointX="0.75" PointY="8.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLNSModel.DAN_TOC" Width="1.5" PointX="0.75" PointY="11.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLNSModel.GIOI_TINH" Width="1.5" PointX="0.75" PointY="13.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLNSModel.HINH_THUC" Width="1.5" PointX="3" PointY="0.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLNSModel.HOC_VAN" Width="1.5" PointX="0.75" PointY="15.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLNSModel.HSNV" Width="1.5" PointX="3" PointY="3.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLNSModel.NGANH_DT" Width="1.5" PointX="3" PointY="11.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLNSModel.NGOAI_NGU" Width="1.5" PointX="3" PointY="19.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLNSModel.NGUUOI_DUNG" Width="1.5" PointX="7.75" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLNSModel.NOI_SINH" Width="1.5" PointX="0.75" PointY="18.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLNSModel.NV_NGOAI_NGU" Width="1.5" PointX="5.25" PointY="5.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLNSModel.PHONG_BAN" Width="1.5" PointX="0.75" PointY="20.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLNSModel.QTCT" Width="1.5" PointX="8.25" PointY="5.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLNSModel.QTDT" Width="1.5" PointX="5.25" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLNSModel.TON_GIAO" Width="1.5" PointX="0.75" PointY="23.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLNSModel.TRUONG_DT" Width="1.5" PointX="3" PointY="13.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLNSModel.XEP_LOAI" Width="1.5" PointX="3" PointY="16.25" IsExpanded="true" />
+        <AssociationConnector Association="QLNSModel.FK_HSNV_CHUC_VU" ManuallyRouted="false" />
+        <AssociationConnector Association="QLNSModel.FK_QTCT_CHUC_VU" ManuallyRouted="false" />
+        <AssociationConnector Association="QLNSModel.FK_HSNV_CHUYEN_MON" ManuallyRouted="false" />
+        <AssociationConnector Association="QLNSModel.FK_HSNV_DAN_TOC" ManuallyRouted="false" />
+        <AssociationConnector Association="QLNSModel.FK_HSNV_GIOI_TINH" ManuallyRouted="false" />
+        <AssociationConnector Association="QLNSModel.FK_QTDT_HINH_THUC" ManuallyRouted="false" />
+        <AssociationConnector Association="QLNSModel.FK_HSNV_HOC_VAN" ManuallyRouted="false" />
+        <AssociationConnector Association="QLNSModel.FK_HSNV_NOI_SINH" ManuallyRouted="false" />
+        <AssociationConnector Association="QLNSModel.FK_HSNV_PHONG_BAN" ManuallyRouted="false" />
+        <AssociationConnector Association="QLNSModel.FK_HSNV_TON_GIAO" ManuallyRouted="false" />
+        <AssociationConnector Association="QLNSModel.FK_QTCT_HSNV" ManuallyRouted="false" />
+        <AssociationConnector Association="QLNSModel.FK_QTDT_HSNV" ManuallyRouted="false" />
+        <AssociationConnector Association="QLNSModel.PK_NV_NGOAI_NGU_HSNV" ManuallyRouted="false" />
+        <AssociationConnector Association="QLNSModel.FK_QTDT_NGANH_DT" ManuallyRouted="false" />
+        <AssociationConnector Association="QLNSModel.PK_NV_NGOAI_NGU_NGOAI_NGU" ManuallyRouted="false" />
+        <AssociationConnector Association="QLNSModel.PK_NV_NGOAI_NGU_XEP_LOAI" ManuallyRouted="false" />
+        <AssociationConnector Association="QLNSModel.FK_QTCT_PHONG_BAN" ManuallyRouted="false" />
+        <AssociationConnector Association="QLNSModel.FK_QTDT_TRUONG_DT" ManuallyRouted="false" />
+        <AssociationConnector Association="QLNSModel.FK_QTDT_XEP_LOAI" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

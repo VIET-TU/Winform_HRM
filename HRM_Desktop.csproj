@@ -1,0 +1,424 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D94C7BE4-8968-4DD0-9317-CDBEFAE7B674}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>HRM_Desktop</RootNamespace>
+    <AssemblyName>HRM_Desktop</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="FontAwesome.Sharp, Version=6.3.0.0, Culture=neutral, PublicKeyToken=d16d1e4e568ec10f, processorArchitecture=MSIL">
+      <HintPath>packages\FontAwesome.Sharp.6.3.0\lib\net472\FontAwesome.Sharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Guna.Charts.WinForms, Version=1.0.9.0, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
+      <HintPath>packages\Guna.Charts.WinForms.1.0.9\lib\net472\Guna.Charts.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Guna.UI2, Version=2.0.4.5, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
+      <HintPath>packages\Guna.UI2.WinForms.2.0.4.5\lib\net472\Guna.UI2.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>C:\Windows\assembly\GAC_MSIL\Microsoft.Office.Interop.Excel\15.0.0.0__71e9bce111e9429c\Microsoft.Office.Interop.Excel.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AuthenticationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AuthenticationForm.Designer.cs">
+      <DependentUpon>AuthenticationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Authentication\ForgetPassword.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Authentication\ForgetPassword.Designer.cs">
+      <DependentUpon>ForgetPassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Authentication\Login.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Authentication\Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CHUC_VU.cs">
+      <DependentUpon>Models.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CHUYEN_MON.cs">
+      <DependentUpon>Models.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Connection.cs" />
+    <Compile Include="DAN_TOC.cs">
+      <DependentUpon>Models.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DashboardControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DashboardControl.Designer.cs">
+      <DependentUpon>DashboardControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GIOI_TINH.cs">
+      <DependentUpon>Models.tt</DependentUpon>
+    </Compile>
+    <Compile Include="HINH_THUC.cs">
+      <DependentUpon>Models.tt</DependentUpon>
+    </Compile>
+    <Compile Include="HOC_VAN.cs">
+      <DependentUpon>Models.tt</DependentUpon>
+    </Compile>
+    <Compile Include="HSNV.cs">
+      <DependentUpon>Models.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MainMenuForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainMenuForm.Designer.cs">
+      <DependentUpon>MainMenuForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainMenu\Report.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MainMenu\Report.Designer.cs">
+      <DependentUpon>Report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Member\CreateMember\CreateNNControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Member\CreateMember\CreateNNControl.Designer.cs">
+      <DependentUpon>CreateNNControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Member\CreateMember\CreateNVControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Member\CreateMember\CreateNVControl.Designer.cs">
+      <DependentUpon>CreateNVControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Member\CreateMember\CreateQTCTControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Member\CreateMember\CreateQTCTControl.Designer.cs">
+      <DependentUpon>CreateQTCTControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Member\CreateMember\CreateQTDTControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Member\CreateMember\CreateQTDTControl.Designer.cs">
+      <DependentUpon>CreateQTDTControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Member\CreateMember\MainCreateControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Member\CreateMember\MainCreateControl.Designer.cs">
+      <DependentUpon>MainCreateControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Member\DetailMember\NNControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Member\DetailMember\NNControl.Designer.cs">
+      <DependentUpon>NNControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Member\DetailMember\QTCTDetial\EditQTCTControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Member\DetailMember\QTCTDetial\EditQTCTControl.Designer.cs">
+      <DependentUpon>EditQTCTControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Member\DetailMember\QTDTControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Member\DetailMember\QTDTControl.Designer.cs">
+      <DependentUpon>QTDTControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Member\DetailMember\QTDTDetial\EditQTDTControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Member\DetailMember\QTDTDetial\EditQTDTControl.Designer.cs">
+      <DependentUpon>EditQTDTControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Member\DetailMember\QTDTDetial\QTDTDetialControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Member\DetailMember\QTDTDetial\QTDTDetialControl.Designer.cs">
+      <DependentUpon>QTDTDetialControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Member\DetailMember\TTNVControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Member\DetailMember\TTNVControl.Designer.cs">
+      <DependentUpon>TTNVControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Member\EditMemberControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Member\EditMemberControl.Designer.cs">
+      <DependentUpon>EditMemberControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Member\Filter\FilterNVControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Member\Filter\FilterNVControl.Designer.cs">
+      <DependentUpon>FilterNVControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Member\MemberControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Member\MemberControl.Designer.cs">
+      <DependentUpon>MemberControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Member\DetailMember\MemberDetailControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Member\DetailMember\MemberDetailControl.Designer.cs">
+      <DependentUpon>MemberDetailControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Member\DetailMember\QTCTControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Member\DetailMember\QTCTControl.Designer.cs">
+      <DependentUpon>QTCTControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Models.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Models.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Models.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="NGANH_DT.cs">
+      <DependentUpon>Models.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NGOAI_NGU.cs">
+      <DependentUpon>Models.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NGUUOI_DUNG.cs">
+      <DependentUpon>Models.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NOI_SINH.cs">
+      <DependentUpon>Models.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NV_NGOAI_NGU.cs">
+      <DependentUpon>Models.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PHONG_BAN.cs">
+      <DependentUpon>Models.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QTCT.cs">
+      <DependentUpon>Models.tt</DependentUpon>
+    </Compile>
+    <Compile Include="QTDT.cs">
+      <DependentUpon>Models.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TON_GIAO.cs">
+      <DependentUpon>Models.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TRUONG_DT.cs">
+      <DependentUpon>Models.tt</DependentUpon>
+    </Compile>
+    <Compile Include="XEP_LOAI.cs">
+      <DependentUpon>Models.tt</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AuthenticationForm.resx">
+      <DependentUpon>AuthenticationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Authentication\ForgetPassword.resx">
+      <DependentUpon>ForgetPassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Authentication\Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DashboardControl.resx">
+      <DependentUpon>DashboardControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainMenuForm.resx">
+      <DependentUpon>MainMenuForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainMenu\Report.resx">
+      <DependentUpon>Report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Member\CreateMember\CreateNNControl.resx">
+      <DependentUpon>CreateNNControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Member\CreateMember\CreateNVControl.resx">
+      <DependentUpon>CreateNVControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Member\CreateMember\CreateQTCTControl.resx">
+      <DependentUpon>CreateQTCTControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Member\CreateMember\CreateQTDTControl.resx">
+      <DependentUpon>CreateQTDTControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Member\CreateMember\MainCreateControl.resx">
+      <DependentUpon>MainCreateControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Member\DetailMember\NNControl.resx">
+      <DependentUpon>NNControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Member\DetailMember\QTCTDetial\EditQTCTControl.resx">
+      <DependentUpon>EditQTCTControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Member\DetailMember\QTDTControl.resx">
+      <DependentUpon>QTDTControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Member\DetailMember\QTDTDetial\EditQTDTControl.resx">
+      <DependentUpon>EditQTDTControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Member\DetailMember\QTDTDetial\QTDTDetialControl.resx">
+      <DependentUpon>QTDTDetialControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Member\DetailMember\TTNVControl.resx">
+      <DependentUpon>TTNVControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Member\EditMemberControl.resx">
+      <DependentUpon>EditMemberControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Member\Filter\FilterNVControl.resx">
+      <DependentUpon>FilterNVControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Member\MemberControl.resx">
+      <DependentUpon>MemberControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Member\DetailMember\MemberDetailControl.resx">
+      <DependentUpon>MemberDetailControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Member\DetailMember\QTCTControl.resx">
+      <DependentUpon>QTCTControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="app.manifest" />
+    <EntityDeploy Include="Models.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Models.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Models.edmx.diagram">
+      <DependentUpon>Models.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="MainMenu\NewFolder1\" />
+    <Folder Include="MainMenu\User\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rxjs.png" />
+    <None Include="Resources\search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user_male.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Images\user_female.jpg" />
+    <Content Include="Images\user_male.jpg" />
+    <Content Include="Models.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Models.edmx</DependentUpon>
+      <LastGenOutput>Models.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Models.edmx</DependentUpon>
+      <LastGenOutput>Models.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
+  </Target>
+  <Import Project="packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
+</Project>
